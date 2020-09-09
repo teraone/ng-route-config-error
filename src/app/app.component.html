@@ -61,7 +61,7 @@
   }
 
   .content {
-    display: flex;
+
     margin: 82px auto 32px;
     padding: 0 16px;
     max-width: 960px;
@@ -322,29 +322,17 @@
   <!-- Resources -->
   <h2>"TypeError: can't access property "routes", route._loadedConfig is undefined"</h2>
 
-  <ul>
-    <li>
-      1) Open your browser console
-    </li>
-    <li>
-      2) Please click on the link in the primary router outlet
-    </li>
-    <li>
-      3) Refresh the page -> see the error :(
-    </li>
-  </ul>
 
 
 
 
-  <h3>Primary Router Outlet:</h3>
-  <div style="border: 1px solid black; width: 300px; height: 200px" >
-
+  <div style="border: 1px solid black; width: 300px; height: 500px; float: left; padding: 20px" >
+    <h3>Primary Router Outlet:</h3>
     <router-outlet></router-outlet>
   </div>
 
-  <h3>Seconary router outlet</h3>
-  <div style="border: 1px solid black; width: 300px; height: 300px" >
+  <div style="border: 1px solid black; width: 300px; height: 500px; float: left; padding: 20px" >
+    <h3>Secondary router outlet</h3>
     <router-outlet name="secondary"></router-outlet>
   </div>
 
@@ -352,22 +340,15 @@
 
 
 
-  <h3>All possible links of this application:</h3>
-
-  Navigate only on secondary router outlet: <br>
-  <a  [routerLink]="[{ outlets: { secondary: '1' } }]" >S1</a> <br>
-  <a  [routerLink]="[{ outlets: { secondary: '2' } }]" >S2</a><br>
-  <br>
-  Navigate only on primary router outlet: <br>
-  <a  [routerLink]="[{ outlets: { primary: '1' } }]" >P1</a><br>
-  <a  [routerLink]="[{ outlets: { primary: '2' } }]" >P2</a><br>
+  <a  routerLink="/" >Primary Outlet Page 1</a><br>
+  <a  routerLink="/2" >Primary Outlet Page 2</a><br>
   <br>
 
-  Navigate both router outlet: <br>
-  <a  [routerLink]="[{ outlets: { primary: '1', secondary: '1' } }]" >P1 S1</a><br>
-  <a  [routerLink]="[{ outlets: { primary: '2', secondary: '1'} }]" >P2 S1</a><br>
-  <a  [routerLink]="[{ outlets: { primary: '1', secondary: '2'} }]" >P1 S2</a><br>
-  <a  [routerLink]="[{ outlets: { primary: '2', secondary: '2'} }]" >P2 S2</a><br>
+  <a  [routerLink]="[{ outlets: { secondary: '1' } }]" >Secondary Page 1</a> <br>
+  <a  [routerLink]="[{ outlets: { secondary: '2' } }]" >Secondary Page 2</a><br>
+  <br>
+
+
 
 
 

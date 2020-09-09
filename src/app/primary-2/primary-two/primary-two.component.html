@@ -1,18 +1,2 @@
-<h1>Primary 2</h1>
+<h1>Page 2</h1>
 
-Navigate only on secondary router outlet: <br>
-<a  [routerLink]="[{ outlets: { secondary: '' } }]" >S1</a> <br>
-<a  [routerLink]="[{ outlets: { secondary: '2' } }]" >S2</a><br>
-<br>
-Navigate only on primary router outlet: <br>
-<a  [routerLink]="[{ outlets: { primary: '' } }]" >P1</a><br>
-<a  [routerLink]="[{ outlets: { primary: '2' } }]" >P2</a><br>
-<br>
-
-Navigate both router outlet: <br>
-<a  [routerLink]="[{ outlets: { primary: '', secondary: '' } }]" >P1 S1</a><br>
-<a  [routerLink]="[{ outlets: { primary: '2', secondary: ''} }]" >P2 S1</a><br>
-<a  [routerLink]="[{ outlets: { primary: '', secondary: '2'} }]" >P1 S2</a><br>
-<a  [routerLink]="[{ outlets: { primary: '2', secondary: '2'} }]" >P2 S2</a><br>
-
-<button (click)="reload()">window.location.reload()</button>
